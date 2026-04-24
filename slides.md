@@ -13,10 +13,11 @@ timer: stopwatch
 
 # Finding the Balance
 
-A four-factor framework for software teams
+A four-factor framework for working with AI.
 
-<div class="mt-10 text-sm opacity-70">
-Methodology over prompt cleverness
+<div class="mt-6 text-base opacity-85">
+  Kareem Sultan<br>
+  <span class="text-cyan-300">linkedin.com/in/kareemsultan</span>
 </div>
 
 ---
@@ -413,4 +414,9 @@ Software teams get the most leverage by being selective about where variance is 
   <div class="text-3xl leading-tight font-700 text-pink-300">
     Be strict where variance is costly, and flexible where it is useful.
   </div>
+</div>
+
+<div class="mt-10 text-base opacity-80">
+  Kareem Sultan<br>
+  <span class="text-cyan-300">linkedin.com/in/kareemsultan</span>
 </div>
