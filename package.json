@@ -1,0 +1,19 @@
+{
+  "name": "four-factors-llm",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md",
+    "export": "slidev export slides.md"
+  },
+  "dependencies": {
+    "echarts": "^6.0.0",
+    "vue-echarts": "^8.0.1"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.14.2",
+    "@slidev/theme-bricks": "^0.25.0",
+    "slidev-theme-dracula": "^0.2.0"
+  }
+}
