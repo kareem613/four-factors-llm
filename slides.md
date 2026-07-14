@@ -58,7 +58,7 @@ A four-factor framework for working with AI.
   </div>
   <div class="rounded-2xl border border-amber-400/30 bg-amber-500/8 p-5">
     <div class="text-xs uppercase tracking-widest text-amber-300">03</div>
-    <div class="mt-2 text-2xl font-700">Execution Rails</div>
+    <div class="mt-2 text-2xl font-700">Execution Constraints</div>
     <div class="mt-3 opacity-80">How work is constrained and guided.</div>
   </div>
   <div class="rounded-2xl border border-green-400/30 bg-green-500/8 p-5">
@@ -141,18 +141,106 @@ Be strict where variance is costly. Leave room where variance is useful.
 
 # Comparing Methodologies
 
-<div class="mt-4 text-sm uppercase tracking-widest opacity-60">Where do methods concentrate creativity and strictness?</div>
+<div class="mt-2 text-sm uppercase tracking-widest opacity-60">Definition vs Execution Variance by Factor</div>
 
-| Method | Shape | Typical Tradeoff |
-| --- | --- | --- |
-| Traditional Development | More structure up front | Reliable, but slower to define |
-| Vibe Coding | Minimal structure, high improvisation | Fast feeling, high variance |
-| Spec-Driven Development | Strong direction, weaker rails | Better intent, uneven execution |
-| Rail Guided Development | High structure across factors | Strong repeatability |
-| Fully Agentic | Automation with selective constraints | Works best when critical items are explicit |
+<div class="mt-2 flex flex-wrap items-center gap-2 text-[11px] opacity-90">
+  <span class="rounded-full border border-red-300/35 bg-red-500/10 px-2 py-0.5"><span class="font-700 text-red-300">↑</span> High</span>
+  <span class="rounded-full border border-amber-300/35 bg-amber-500/10 px-2 py-0.5"><span class="font-700 text-amber-300">■</span> Medium</span>
+  <span class="rounded-full border border-lime-300/35 bg-lime-500/10 px-2 py-0.5"><span class="font-700 text-lime-300">↓</span> Low</span>
+  <span class="rounded-full border border-slate-300/35 bg-slate-500/10 px-2 py-0.5"><span class="font-700 text-slate-200">—</span> None</span>
+</div>
 
-<div class="mt-6 opacity-78">
-Methodologies differ mostly in where they allow variance and where they force strictness.
+<div class="mt-2 text-[10px] opacity-70">Values are intentionally simplified to one symbol per cell for scan speed.</div>
+
+<div class="mt-3 text-[0.6rem] leading-snug overflow-x-auto">
+  <table class="w-full border-separate border-spacing-y-1">
+    <thead>
+      <tr class="text-[0.58rem] uppercase tracking-[0.08em] opacity-75">
+        <th rowspan="2" class="text-left pr-2">Method</th>
+        <th colspan="2" class="text-center">Current State</th>
+        <th colspan="2" class="text-center">Direction</th>
+        <th colspan="2" class="text-center">Constraints</th>
+        <th colspan="2" class="text-center">Testable End State</th>
+        <th rowspan="2" class="text-left pl-2">What This Produces</th>
+      </tr>
+      <tr class="text-[0.56rem] uppercase tracking-[0.08em] opacity-60">
+        <th class="text-center">Def</th>
+        <th class="text-center">Exec</th>
+        <th class="text-center">Def</th>
+        <th class="text-center">Exec</th>
+        <th class="text-center">Def</th>
+        <th class="text-center">Exec</th>
+        <th class="text-center">Def</th>
+        <th class="text-center">Exec</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="pr-2">Traditional Development</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-slate-200">—</td>
+        <td class="pl-2">Reliable output with stronger up-front planning and slower definition.</td>
+      </tr>
+      <tr>
+        <td class="pr-2">Vibe Coding</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="pl-2">Fast-feeling execution with high variance and uneven validation quality.</td>
+      </tr>
+      <tr>
+        <td class="pr-2">Spec-Driven Development</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-slate-200">—</td>
+        <td class="pl-2">Better intent capture, but execution quality can vary without strong constraints.</td>
+      </tr>
+      <tr>
+        <td class="pr-2">Constraint-Guided Development</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-slate-200">—</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-slate-200">—</td>
+        <td class="pl-2">High repeatability by moving creativity into system design, not runtime variance.</td>
+      </tr>
+      <tr>
+        <td class="pr-2">Fully Agentic</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-lime-300">↓</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-amber-300">■</td>
+        <td class="text-center font-700 text-red-300">↑</td>
+        <td class="text-center font-700 text-slate-200">—</td>
+        <td class="pl-2">Strong automation when critical constraints and verification are explicit.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="mt-4 opacity-80">
+Methods differ less by prompting style and more by where they place variance in definition and execution across the four factors.
 </div>
 
 ---
@@ -217,20 +305,20 @@ Implementation should preserve intent while still allowing flexibility in realiz
 layout: two-cols-header
 ---
 
-# Factor 3: Execution Rails
+# Factor 3: Execution Constraints
 
 ::left::
 
 <div class="text-xs uppercase tracking-widest text-amber-300 opacity-85">Definition Phase</div>
 <div class="mt-1 text-2xl font-700">Medium Creativity</div>
 <div class="mt-2 text-base leading-relaxed opacity-82">
-  Designing rails requires judgment about process, risk, and the right amount of constraint.
+  Designing constraints requires judgment about process, risk, and the right amount of strictness.
 </div>
 
 <div class="mt-5 text-xs uppercase tracking-widest text-amber-300 opacity-85">Execution Phase</div>
 <div class="mt-1 text-2xl font-700">Low to None</div>
 <div class="mt-2 text-base leading-relaxed opacity-82">
-  Follow rails consistently, with flexibility only where the rails intentionally leave room.
+  Follow constraints consistently, with flexibility only where the constraints intentionally leave room.
 </div>
 
 ::right::
@@ -305,7 +393,7 @@ Software teams get the most leverage by being selective about where variance is 
 
 <div class="mt-4 grid grid-cols-2 gap-4 items-stretch">
   <div class="rounded-2xl border border-pink-400/25 bg-pink-500/8 p-4">
-    <div class="text-xs uppercase tracking-widest text-pink-300 opacity-90">Too Few Rails</div>
+    <div class="text-xs uppercase tracking-widest text-pink-300 opacity-90">Too Few Constraints</div>
     <div class="mt-2 text-xl font-700 leading-tight">Not professional software development</div>
     <div class="mt-3 text-sm leading-relaxed opacity-80">
       The work drifts, quality varies, and execution becomes hard to trust.
@@ -313,7 +401,7 @@ Software teams get the most leverage by being selective about where variance is 
   </div>
 
   <div class="rounded-2xl border border-cyan-400/25 bg-cyan-500/8 p-4">
-    <div class="text-xs uppercase tracking-widest text-cyan-300 opacity-90">Too Many Rails</div>
+    <div class="text-xs uppercase tracking-widest text-cyan-300 opacity-90">Too Many Constraints</div>
     <div class="mt-2 text-xl font-700 leading-tight">You might as well write it yourself</div>
     <div class="mt-3 text-sm leading-relaxed opacity-80">
       The specification overhead becomes so heavy that the leverage disappears.
@@ -354,7 +442,7 @@ Software teams get the most leverage by being selective about where variance is 
     <div class="text-xs uppercase tracking-widest text-amber-300 opacity-90">Not Perfectly Optimized</div>
     <div class="mt-2 text-lg font-700 leading-tight">Good balance is a range, not a point.</div>
     <div class="mt-3 text-sm leading-relaxed opacity-80">
-      You do not need to optimize rails perfectly. Many different choices can still be effective.
+      You do not need to optimize constraints perfectly. Many different choices can still be effective.
     </div>
   </div>
 
@@ -362,7 +450,7 @@ Software teams get the most leverage by being selective about where variance is 
     <div class="text-xs uppercase tracking-widest text-cyan-300 opacity-90">Varies By Project</div>
     <div class="mt-2 text-lg font-700 leading-tight">Different work justifies different structure.</div>
     <div class="mt-3 text-sm leading-relaxed opacity-80">
-      Higher-risk or more repeatable projects can justify more rails. Exploratory projects often need fewer.
+      Higher-risk or more repeatable projects can justify more constraints. Exploratory projects often need fewer.
     </div>
   </div>
 
@@ -381,6 +469,23 @@ Software teams get the most leverage by being selective about where variance is 
 
 ---
 
+# Time Allocation With LLMs
+
+| Phase | Refinement | Specs | Implementing | Code Review |
+| --- | --- | --- | --- | --- |
+| **Pre-AI** | 5% | 5% | 80% | 10% |
+| **Naive AI** | 5% | 15% | 5% | 75% |
+| **Mature AI** | ~0% | 90% | 5% | 5% |
+
+<div class="mt-6 rounded-2xl border border-amber-400/25 bg-amber-500/8 p-5">
+  <ul class="space-y-3 text-lg leading-relaxed opacity-90">
+    <li>Naive AI use often <span class="text-pink-300 font-700">moves effort</span> from implementation into code review and correction loops.</li>
+    <li>Effort can be shifted upstream into <span class="text-cyan-300 font-700">problem framing and specification</span>, so execution is faster and review is lighter.</li>
+  </ul>
+</div>
+
+---
+
 # Practical Operating Principle
 
 <div class="mt-8 grid grid-cols-[1.2fr_1fr] gap-8">
@@ -388,7 +493,7 @@ Software teams get the most leverage by being selective about where variance is 
     <ol class="space-y-4 text-xl leading-relaxed">
       <li>Define the <span class="text-cyan-300 font-700">current state</span> clearly enough to trust it.</li>
       <li>Define <span class="text-pink-300 font-700">direction</span> creatively enough to choose the right path.</li>
-      <li>Define <span class="text-amber-300 font-700">rails</span> tightly enough to protect what matters.</li>
+      <li>Define <span class="text-amber-300 font-700">constraints</span> tightly enough to protect what matters.</li>
       <li>Define a <span class="text-green-300 font-700">testable end state</span> precisely enough to verify success objectively.</li>
     </ol>
   </div>
